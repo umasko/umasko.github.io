@@ -5,6 +5,8 @@ body {
   font-size: 18px;
 }
 
+
+
 ul.menu {
   padding: 0px;
   list-style: none;
@@ -27,6 +29,36 @@ a {
   text-decoration: none;
 }
 
+a.sample {
+  color: red;
+}
+
 .container {
   width: 100%;
+}
+
+.samples {
+  margin-top: 50px;
+}
+
+span.sample {
+  padding: 40px;
+  margin-right: 10px;
+  text-align: center;
+  vertical-align: center;
+  font-size: 30px;
+  color: white;
+  border-radius: 5px;
+}
+
+span.kick {
+  background-color: #ff1a1a;
+}
+
+span.clap {
+  background-color: #ff4d4d;
+}
+
+span.hat {
+  background-color: #ff8080;
 }
