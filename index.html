@@ -3,15 +3,29 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="styles.css">
+  <script src="http://www.w3schools.com/lib/w3data.js"></script>
 </head>
 <body>
   <div class="container">
-    <h1>Hi! My name is Uladzimir.</h1>
-    <p>Here are my Javascript playgrounds:</p>
-    <ul class="menu">
-      <li class="menu-item"><a href="playgrounds/beatmaker/beatmaker.html">Beatmaker</a></li>
-      <li class="menu-item"><a href="playgrounds/jquery/jquery.html">jQuery</a></li>
-    </ul>
+    <header w3-include-html="layouts/header.html"></header>
+    <div class="content">
+      <h1>Hi! My name is Uladzimir.</h1>
+      <p>Here are my Javascript playgrounds:</p>
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="playgrounds/beatroot/beatroot.html" class="menu-link">
+            <img class="beatroot" src="playgrounds/beatroot/beatroot.jpg">
+            <p class="brand">Beatroot</p>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="playgrounds/jquery/animations.html" class="menu-link">
+            <p class="brand">Animations</p>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
+  <script>w3IncludeHTML();</script>
 </body>
 </html>
