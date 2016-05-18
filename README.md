@@ -1,2 +1,2 @@
-# umasko.github.io
-Javascript playground
+## Playgrounds
+Here I'm practicing making various things with JavaScript and jQuery.
