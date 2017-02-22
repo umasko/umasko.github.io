@@ -1,28 +1,25 @@
-var samplesDiv = $('.samples');
-var padsDiv    = $('.pads');
-
-function Pad(name, text, _file, _color) {
+function Pad(name, text) {
   this.name  = name;
   this.text  = text;
-  // this.file  = file;
-  // this.color = color;
-
-  var sample = document.createElement('AUDIO');
-
-  sample.id      = name;
-  sample.preload = 'auto';
-  sample.src     = '../../assets/samples/' + name + '.mp3';
-
-  samplesDiv.append(sample);
-
-  var pad = document.createElement('div');
-
-  pad.className   = 'sample' + ' ' + name;
-  pad.textContent = text;
-
-  padsDiv.append(pad)
 };
 
-new Pad('kick', 'Kick (A)');
-new Pad('clap', 'Clap (S)');
-new Pad('hat',  'Hat (D)');
+Pad.prototype.addSample = function() {
+  var sample = document.createElement('AUDIO');
+
+  sample.id      = this.name;
+  sample.preload = 'auto';
+  sample.src     = '../../assets/samples/' + this.name + '.mp3';
+
+  document.getElementsByClassName('samples')[0]
+          .appendChild(sample);
+};
+
+Pad.prototype.render = function() {
+  var pad = document.createElement('div');
+
+  pad.className   = 'sample' + ' ' + this.name;
+  pad.textContent = this.text;
+
+  document.getElementsByClassName('pads')[0]
+          .appendChild(pad);
+};

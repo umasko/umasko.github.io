@@ -16,6 +16,30 @@ function resetColor(key) {
   });
 };
 
+$('.kick')
+  .mousedown(function() {
+    playSample('65');
+  })
+  .mouseup(function() {
+    resetColor('65');
+  });
+
+$('.clap')
+  .mousedown(function() {
+    playSample('83');
+  })
+  .mouseup(function() {
+    resetColor('83');
+  });
+
+$('.hat')
+  .mousedown(function() {
+    playSample('68');
+  })
+  .mouseup(function() {
+    resetColor('68');
+  });
+
 $(document).keydown(function(event) {
   code = event.which;
   playSample(code);
