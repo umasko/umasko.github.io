@@ -10,7 +10,10 @@ function playSample(key) {
 };
 
 function resetColor(key) {
-  $('.' + samples[key][0]).css({'background-color': samples[key][1], 'transition':'background-color 0.2s ease' });
+  $('.' + samples[key][0]).css({
+    'background-color': samples[key][1],
+    'transition': 'background-color 0.2s ease'
+  });
 };
 
 $(document).keydown(function(event) {

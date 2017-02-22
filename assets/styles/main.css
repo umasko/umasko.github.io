@@ -41,7 +41,7 @@ a.back {
   width: 100%;
 }
 
-span.sample {
+div.sample {
   display: inline-block;
   width: 150px;
   height: 150px;
@@ -57,15 +57,16 @@ span.sample {
 .samples {
   margin-top: 30px;
 }
-span.kick {
+
+div.kick {
   background-color: #333333;
 }
 
-span.clap {
+div.clap {
   background-color: #666666;
 }
 
-span.hat {
+div.hat {
   background-color: #999999;
 }
 
