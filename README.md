@@ -1,2 +1,2 @@
 ## Playgrounds
-Here I'm practicing making various things with JavaScript and jQuery.
+Here I'm playing with Javascript and it's libraries.
