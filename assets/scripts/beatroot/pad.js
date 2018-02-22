@@ -1,7 +1,7 @@
 function Pad(name, text) {
   this.name  = name;
   this.text  = text;
-};
+}
 
 Pad.prototype.addSample = function() {
   var sample = document.createElement('AUDIO');

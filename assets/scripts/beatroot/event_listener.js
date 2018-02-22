@@ -7,14 +7,14 @@ function playSample(key) {
   // 'clone()' is a shitty workaround to minimize delays between each play
   $('#' + samples[key][0]).clone()[0].play();
   $('.' + samples[key][0]).css('background-color', samples['pressed']);
-};
+}
 
 function resetColor(key) {
   $('.' + samples[key][0]).css({
     'background-color': samples[key][1],
     'transition': 'background-color 0.2s ease'
   });
-};
+}
 
 $('.kick')
   .mousedown(function() {
