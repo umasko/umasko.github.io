@@ -2,16 +2,91 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="../../assets/styles/main.css">
   <script src="../../assets/scripts/jquery-2.2.3.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Lato:700|Roboto');
+
+    body {
+      background: #9C27B0;
+      color: #FFF;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .logo {
+      font-family: 'Lato', sans-serif;
+      font-weight: 700px;
+      font-size: 36px;
+    }
+
+    .track {
+      display: block;
+      padding: 10px 0px;
+    }
+
+    .track__name {
+      display: inline-block;
+      line-height: 24px;
+      vertical-align: top;
+    }
+
+    .switch {
+      margin-left: 10px;
+      display: inline-block;
+      height: 24px;
+      width: 24px;
+      background: #FFF;
+    }
+
+    .toogled {
+      background: #000;
+    }
+
+    .sequencer {
+      margin-top: 30px;
+    }
+
+
+  </style>
 </head>
 <body>
   <div class="samples"></div>
   <div class="container">
-    <input id='bpm' value='60'>
+    <div class="logo">Trap Machine</div>
+    <div class="sequencer">
+      <div class="track kick" data-sample-id="kick">
+        <div class="track__name">Kick</div>
+        <div class="switch"></div>
+        <div class="switch"></div>
+        <div class="switch"></div>
+        <div class="switch"></div>
+        <div class="switch"></div>
+        <div class="switch"></div>
+        <div class="switch"></div>
+        <div class="switch"></div>
+      </div>
+
+      <div class="track clap" data-sample-id="clap">
+        <div class="track__name">Clap</div>
+        <div class="switch"></div>
+        <div class="switch"></div>
+        <div class="switch"></div>
+        <div class="switch"></div>
+        <div class="switch"></div>
+        <div class="switch"></div>
+        <div class="switch"></div>
+        <div class="switch"></div>
+      </div>
+    </div>
+    <input id='bpm' value='200'>
+    <button id="play">Play</button>
   </div>
   <script src="../../assets/scripts/sequencer/index.js"></script>
 
-  <audio id="kick" preload="auto" src="../../assets/samples/kick.mp3"></audio>
+  <audio id="kick" preload="true" src="../../assets/samples/kick.mp3"></audio>
+  <audio id="clap" preload="true" src="../../assets/samples/clap.mp3"></audio>
 </body>
 </html>

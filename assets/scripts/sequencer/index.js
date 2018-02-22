@@ -1,4 +1,6 @@
 $(function() {
+  var interval, sample;
+
   interval = 0;
 
   function calculateInterval() {
@@ -9,17 +11,48 @@ $(function() {
     console.log('Interval is ' + interval + ' ms');
   }
 
-  function playTrack() {
-    playSample();
-    setTimeout(function() { playTrack(); }, interval);
-  }
+  function playSequence() {
+    var kickSwitches, clapSwitches, kickSample, clapSample;
 
-  function playSample() {
-    $('#kick').clone()[0].play();
+    kickSwitches = $('.track.kick').find('.switch');
+    clapSwitches = $('.track.clap').find('.switch');
+
+    kickSample = $('#kick');
+    clapSample = $('#clap');
+
+    function playToogledSwitches(i) {
+      if ($(kickSwitches[i]).hasClass('toogled')) {
+        playSample(kickSample);
+      }
+
+      if ($(clapSwitches[i]).hasClass('toogled')) {
+        playSample(clapSample);
+      }
+
+      i++;
+      i = i == 8 ? 0 : i;
+
+      setTimeout(function() { playToogledSwitches(i); }, interval)
+    }
+
+    playToogledSwitches(0);
   }
 
   calculateInterval();
-  playTrack();
 
-  $('#bpm').on('change', function() { calculateInterval(); });
+  function playSample(sample) {
+    sample.clone()[0].play();
+  }
+
+  $('.switch').on('click', function() {
+    $(this).toggleClass('toogled');
+  });
+
+  $('#bpm').on('change', function() {
+    calculateInterval();
+  });
+
+  $('#play').click(function() { playSequence(); });
+
+  // $('#bpm').on('change', function() { calculateInterval(); });
 });
