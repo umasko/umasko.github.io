@@ -12,17 +12,23 @@ $(function() {
   }
 
   function playSequence() {
-    var kickSwitches, clapSwitches, kickSample, clapSample;
+    var kick1Switches, kick2Switches, clapSwitches, kick1Sample, kick2Sample, clapSample;
 
-    kickSwitches = $('.track.kick').find('.switch');
-    clapSwitches = $('.track.clap').find('.switch');
+    kick1Switches = $('.sequencer__track.kick1').find('.sequencer__track-step');
+    kick2Switches = $('.sequencer__track.kick2').find('.sequencer__track-step');
+    clapSwitches = $('.sequencer__track.clap').find('.sequencer__track-step');
 
-    kickSample = $('#kick');
+    kick1Sample = $('#kick1');
+    kick2Sample = $('#kick2');
     clapSample = $('#clap');
 
     function playToogledSwitches(i) {
-      if ($(kickSwitches[i]).hasClass('toogled')) {
-        playSample(kickSample);
+      if ($(kick1Switches[i]).hasClass('toogled')) {
+        playSample(kick1Sample);
+      }
+
+      if ($(kick2Switches[i]).hasClass('toogled')) {
+        playSample(kick2Sample);
       }
 
       if ($(clapSwitches[i]).hasClass('toogled')) {
@@ -44,7 +50,7 @@ $(function() {
     sample.clone()[0].play();
   }
 
-  $('.switch').on('click', function() {
+  $('.sequencer__track-step').on('click', function() {
     $(this).toggleClass('toogled');
   });
 

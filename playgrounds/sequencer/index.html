@@ -3,90 +3,67 @@
 <head>
   <meta charset="utf-8">
   <script src="../../assets/scripts/jquery-2.2.3.min.js"></script>
-  <style>
-    @import url('https://fonts.googleapis.com/css?family=Lato:700|Roboto');
-
-    body {
-      background: #9C27B0;
-      color: #FFF;
-      font-family: 'Roboto', sans-serif;
-    }
-
-    .container {
-      padding: 20px;
-    }
-
-    .logo {
-      font-family: 'Lato', sans-serif;
-      font-weight: 700px;
-      font-size: 36px;
-    }
-
-    .track {
-      display: block;
-      padding: 10px 0px;
-    }
-
-    .track__name {
-      display: inline-block;
-      line-height: 24px;
-      vertical-align: top;
-    }
-
-    .switch {
-      margin-left: 10px;
-      display: inline-block;
-      height: 24px;
-      width: 24px;
-      background: #FFF;
-    }
-
-    .toogled {
-      background: #000;
-    }
-
-    .sequencer {
-      margin-top: 30px;
-    }
-
-
-  </style>
+  <link rel="stylesheet" href="../../assets/styles/sequencer.css">
 </head>
 <body>
-  <div class="samples"></div>
+  <header>
+    <div class="header__logo">Trap Machine</div>
+  </header>
   <div class="container">
-    <div class="logo">Trap Machine</div>
     <div class="sequencer">
-      <div class="track kick" data-sample-id="kick">
-        <div class="track__name">Kick</div>
-        <div class="switch"></div>
-        <div class="switch"></div>
-        <div class="switch"></div>
-        <div class="switch"></div>
-        <div class="switch"></div>
-        <div class="switch"></div>
-        <div class="switch"></div>
-        <div class="switch"></div>
+      <div class="sequencer__track kick1" data-sample-id="kick1">
+        <div class="sequencer__track-name">Kick 1</div>
+        <div class="sequencer__track-steps">
+          <div class="sequencer__track-step"></div>
+          <div class="sequencer__track-step"></div>
+          <div class="sequencer__track-step"></div>
+          <div class="sequencer__track-step"></div>
+          <div class="sequencer__track-step"></div>
+          <div class="sequencer__track-step"></div>
+          <div class="sequencer__track-step"></div>
+          <div class="sequencer__track-step"></div>
+        </div>
       </div>
 
-      <div class="track clap" data-sample-id="clap">
-        <div class="track__name">Clap</div>
-        <div class="switch"></div>
-        <div class="switch"></div>
-        <div class="switch"></div>
-        <div class="switch"></div>
-        <div class="switch"></div>
-        <div class="switch"></div>
-        <div class="switch"></div>
-        <div class="switch"></div>
+      <div class="sequencer__track kick2" data-sample-id="kick2">
+          <div class="sequencer__track-name">Kick 2</div>
+          <div class="sequencer__track-steps">
+            <div class="sequencer__track-step"></div>
+            <div class="sequencer__track-step"></div>
+            <div class="sequencer__track-step"></div>
+            <div class="sequencer__track-step"></div>
+            <div class="sequencer__track-step"></div>
+            <div class="sequencer__track-step"></div>
+            <div class="sequencer__track-step"></div>
+            <div class="sequencer__track-step"></div>
+          </div>
+        </div>
+
+      <div class="sequencer__track clap" data-sample-id="clap">
+        <div class="sequencer__track-name">Clap</div>
+        <div class="sequencer__track-steps">
+          <div class="sequencer__track-step"></div>
+          <div class="sequencer__track-step"></div>
+          <div class="sequencer__track-step"></div>
+          <div class="sequencer__track-step"></div>
+          <div class="sequencer__track-step"></div>
+          <div class="sequencer__track-step"></div>
+          <div class="sequencer__track-step"></div>
+          <div class="sequencer__track-step"></div>
+        </div>
       </div>
     </div>
-    <input id='bpm' value='200'>
-    <button id="play">Play</button>
+
+    <div class="controls">
+      <input id="bpm" placeholder="BPM" value="200">
+      <a href="#" id="play" class="btn">Play</a>
+    </div>
   </div>
+
   <script src="../../assets/scripts/sequencer/index.js"></script>
 
-  <audio id="kick" preload="true" src="../../assets/samples/kick.mp3"></audio>
-  <audio id="clap" preload="true" src="../../assets/samples/clap.mp3"></audio>
+  <audio id="kick1" preload="true" src="../../assets/samples/kick_trap_1.wav"></audio>
+  <audio id="kick2" preload="true" src="../../assets/samples/kick_trap_2.wav"></audio>
+  <audio id="clap" preload="true" src="../../assets/samples/clap_trap.wav"></audio>
 </body>
 </html>
