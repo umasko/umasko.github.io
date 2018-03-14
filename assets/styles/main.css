@@ -10,6 +10,10 @@ body {
   margin: 0;
 }
 
+header {
+  padding: 20px;
+}
+
 .container {
   padding: 20px;
 }
@@ -27,12 +31,20 @@ a:hover {
   text-decoration: underline;
 }
 
-.menu li a {
+.menu {
+  margin-bottom: 30px;
+}
+
+.menu__content {
+  margin: 0;
+}
+
+.menu__content li a {
   font-size: 22px;
   color: black;
 }
 
-.menu li a:hover {
+.menu__content li a:hover {
   color: white;
   background: red;
   text-decoration: none;
@@ -88,17 +100,6 @@ img.beatroot {
   margin: 0px;
   color: white;
   text-decoration: none;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 70px;
-  width: 100%;
-  padding-left: 10px;
-  line-height: 70px;
-  background-color: black;
 }
 
 .content {
